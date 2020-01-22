@@ -8,3 +8,11 @@
 * Ruby
 * Rails
 * Git
+* 
+
+
+git add -A
+git commit -m ""
+git checkout master
+git merge modify-README
+git push
