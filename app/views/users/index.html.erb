@@ -1,8 +1,15 @@
-<% provide(:title, 'All Users') %>
+<% provide(:ttle, 'All Users') %>
 <h1>ユーザー一覧</h1>
 
+<%= search_form_for @q do |f| %>
+    <%= f.label :name_cont %>
+    <%= f.search_field :name_cont %>
+    
+    <%= f.submit '検索' %>
+<% end %>
+
 <div class="col-md-10 col-md-offset-1">
-  <%= will_paginate %>
+ <%= will_paginate %>
   <table class="table table-condensed table-hover" id="table-users">
     <thead>
       <tr>
@@ -41,7 +48,7 @@
       </tr>
     <% end %>
   </table>
-  <%= will_paginate %>
+<%= will_paginate %>
 </div>
 
 <!--モーダルウインドウ表示-->
